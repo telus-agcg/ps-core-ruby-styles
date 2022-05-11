@@ -674,7 +674,7 @@ Layout/MultilineArrayBraceLayout:
 Layout/MultilineArrayLineBreaks:
   Description: Checks that each item in a multi-line array literal starts on a separate
     line.
-  Enabled: false
+  Enabled: true
   VersionAdded: '0.67'
 Layout/MultilineAssignmentLayout:
   Description: Check for a newline after the assignment operator in multi-line assignments.
@@ -709,12 +709,12 @@ Layout/MultilineHashBraceLayout:
 Layout/MultilineHashKeyLineBreaks:
   Description: Checks that each item in a multi-line hash literal starts on a separate
     line.
-  Enabled: false
+  Enabled: true
   VersionAdded: '0.67'
 Layout/MultilineMethodArgumentLineBreaks:
   Description: Checks that each argument in a multi-line method call starts on a separate
     line.
-  Enabled: false
+  Enabled: true
   VersionAdded: '0.67'
 Layout/MultilineMethodCallBraceLayout:
   Description: Checks that the closing brace in a method call is either on the same
