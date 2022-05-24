@@ -67,6 +67,15 @@ Layout/MultilineArrayLineBreaks:
 Layout/MultilineHashKeyLineBreaks:
   Enabled: true
 
+Layout/FirstMethodArgumentLineBreak:
+  Enabled: true
+
+Layout/FirstArrayElementLineBreak:
+  Enabled: true
+
+Layout/FirstHashElementLineBreak:
+  Enabled: true
+
 Layout/SpaceBeforeBrackets:
   Enabled: true
 
