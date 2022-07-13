@@ -1,3 +1,6 @@
+require:
+  - rubocop-rspec
+
 inherit_mode:
   merge:
   - Exclude
@@ -416,6 +419,10 @@ RSpec/ExampleLength:
 
 RSpec/FilePath:
   Enabled: false
+
+RSpec/Focus:
+  Enabled: true
+  AutoCorrect: false
 
 RSpec/LeadingSubject:
   Enabled: false

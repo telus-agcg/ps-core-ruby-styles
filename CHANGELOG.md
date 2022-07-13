@@ -22,6 +22,12 @@ When submitting a new PR add your PR's details under the appropriate subsection 
 ### Security
 
 ------------------------
+## 0.0.4 (2022-07-13)
+
+### Changed
+
+* [13](https://github.com/technekes/ps-core-ruby-styles/pull/13): Made RSpec/Focus non-autocorrectable; Added rubocop-rspec dep - [@nathansgithub](https://github.com/nathansgithub)
+
 ## 0.0.3 (2022-07-13)
 
 ### Changed
