@@ -361,6 +361,83 @@ Naming/RescuedExceptionsVariableName:
 Naming/VariableNumber:
   Enabled: false
 
+RSpec/LetSetup:
+  Enabled: false
+#  Severity: warning # enable in future
+
+RSpec/MessageSpies:
+  Enabled: false
+#  Severity: warning # enable in future
+
+RSpec/MissingExampleGroupArgument:
+  Enabled: false
+#  Severity: warning # enable in future
+
+RSpec/MultipleExpectations:
+  Enabled: false
+#  Severity: warning # enable in future
+
+RSpec/NestedGroups:
+  Enabled: false
+#  Severity: warning # enable in future
+
+RSpec/OverwritingSetup:
+  Enabled: false
+#  Severity: warning # enable in future
+
+RSpec/RepeatedDescription:
+  Enabled: false
+#  Severity: warning # enable in future
+
+RSpec/RepeatedExampleGroupBody:
+  Enabled: false
+#  Severity: warning # enable in future
+
+RSpec/RepeatedExampleGroupDescription:
+  Enabled: false
+#  Severity: warning # enable in future
+
+RSpec/ScatteredSetup:
+  Enabled: false
+#  Severity: warning # enable in future
+
+RSpec/VerifiedDoubles:
+  Enabled: false
+#  Severity: warning # enable in future
+
+RSpec/AnyInstance:
+  Enabled: false
+
+RSpec/ContextWording:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/FilePath:
+  Enabled: false
+
+RSpec/LeadingSubject:
+  Enabled: false
+
+RSpec/LetBeforeExamples:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
+RSpec/NamedSubject:
+  Enabled: false
+
+RSpec/PredicateMatcher:
+  Enabled: false
+
+RSpec/ScatteredLet:
+  Enabled: false
+
+RSpec/SubjectStub:
+  Enabled: false
+
 Security/CompoundHash:
   Enabled: false
 

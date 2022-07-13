@@ -22,6 +22,12 @@ When submitting a new PR add your PR's details under the appropriate subsection 
 ### Security
 
 ------------------------
+## 0.0.3 (2022-07-13)
+
+### Changed
+
+* [12](https://github.com/technekes/ps-core-ruby-styles/pull/12): Added RSpec-specific cops - [@nathansgithub](https://github.com/nathansgithub)
+
 ## 0.0.2 (2022-07-08)
 
 ### Changed
