@@ -7,3 +7,6 @@ AllCops:
     - _site/**/*
     - node_modules/**/*
     - vendor/**/*
+
+RSpec/DescribeClass:
+  Enabled: false

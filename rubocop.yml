@@ -421,7 +421,6 @@ RSpec/FilePath:
   Enabled: false
 
 RSpec/Focus:
-  Enabled: true
   AutoCorrect: false
 
 RSpec/LeadingSubject:
