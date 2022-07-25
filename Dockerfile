@@ -1,4 +1,4 @@
-FROM ruby:3.1.1-alpine3.15
+FROM ruby:3.1.1
 
 WORKDIR /usr/src/app
 
@@ -7,12 +7,10 @@ COPY ps-core-ruby-styles.gemspec .
 COPY VERSION .
 
 RUN \
-  apk update && \
-  apk upgrade && \
-  apk add --no-cache build-base git openssh ruby-dev && \
+  apt-get update && \
+  apt-get upgrade -y && \
   gem update --system && \
   gem install bundler && \
-  bundle install -j5 && \
-  apk del build-base ruby-dev
+  bundle install -j5
 
 COPY . /usr/src/app
