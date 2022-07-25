@@ -1,18 +1,12 @@
 # frozen_string_literal: true
 
 require "bundler/gem_tasks"
-require "rake/testtask"
 require "rubocop/rake_task"
 
-Rake::TestTask.new do |t|
-  t.libs << "test"
-  t.pattern = "test/**/*_test.rb"
-  t.warning = true
-  t.verbose = true
-end
+require "rspec/core/rake_task"
+require "rainbow/ext/string" unless String.respond_to?(:color)
 
-RuboCop::RakeTask.new
+RSpec::Core::RakeTask.new(:spec)
+RuboCop::RakeTask.new(:rubocop)
 
-load "lib/tasks/config.rake"
-
-task default: ["rubocop", "test"]
+task default: [:spec, :rubocop]

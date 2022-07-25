@@ -22,6 +22,12 @@ When submitting a new PR add your PR's details under the appropriate subsection 
 ### Security
 
 ------------------------
+## 0.0.4.1 (2022-07-25)
+
+### Changed
+
+* [14](https://github.com/technekes/ps-core-ruby-styles/pull/14): Enabled running using Docker Compose - [@nathansgithub](https://github.com/nathansgithub)
+
 ## 0.0.4 (2022-07-13)
 
 ### Changed
