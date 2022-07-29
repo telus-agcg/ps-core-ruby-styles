@@ -1,0 +1,7 @@
+#!/bin/bash
+
+mkdir ~/.gem/ && echo -e "---\n:github: Bearer $GH_TOKEN\n" >> ~/.gem/credentials
+
+gem build ps-core-ruby-styles.gemspec
+
+gem push --key github --host https://rubygems.pkg.github.com/technekes ps-core-ruby-styles-0.0.1.gem
