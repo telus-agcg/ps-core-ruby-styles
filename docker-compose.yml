@@ -1,8 +1,17 @@
-version: "3.3"
+version: "3.8"
 
 services: &default-services
-  gem: &default
+  gem: &base
     build:
       context: .
+      dockerfile: Dockerfile
     volumes:
       - .:/usr/src/app
+
+  test:
+    <<: *base
+    command: rake spec
+
+  lint:
+    <<: *base
+    command: rake rubocop
