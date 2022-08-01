@@ -1,16 +1,22 @@
-FROM ruby:3.1.1
+FROM ruby:3.1.1 AS pre_release
 
 WORKDIR /usr/src/app
 
-COPY gems.rb .
-COPY ps-core-ruby-styles.gemspec .
-COPY VERSION .
+RUN gem install bundler
 
-RUN \
-  apt-get update && \
-  apt-get upgrade -y && \
-  gem update --system && \
-  gem install bundler && \
-  bundle install -j5
+COPY gems.* /usr/src/app/
 
 COPY . /usr/src/app
+
+RUN bundle install -j5
+
+FROM ruby:3.1.1 AS release
+
+WORKDIR /usr/src/app
+
+RUN \
+  apt update && \
+  apt upgrade -y
+
+COPY --from=pre_release /usr/local/bundle/ /usr/local/bundle/
+COPY --from=pre_release /usr/src/app/ /usr/src/app/
