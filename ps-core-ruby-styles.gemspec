@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.author   = "PsCore"
   spec.homepage = "https://github.com/technekes/ps-core-ruby-styles"
 
-  spec.files = ["rubocop.yml", "rubocop-cli.yml"]
+  spec.files = Dir["*.yml"]
 
   spec.metadata = {
     "source_code_uri" => "https://github.com/technekes/ps-core-ruby-styles/tree/v#{spec.version}",
