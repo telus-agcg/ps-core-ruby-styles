@@ -22,6 +22,12 @@ When submitting a new PR add your PR's details under the appropriate subsection 
 ### Security
 
 ------------------------
+## 0.0.4.2 (2022-09-22)
+
+### Changed
+
+* [24](https://github.com/technekes/ps-core-ruby-styles/pull/24): Added opt-in rubocop-strict.yml - [@nathansgithub](https://github.com/nathansgithub)
+
 ## 0.0.4.1 (2022-07-25)
 
 ### Changed
