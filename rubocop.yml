@@ -378,7 +378,7 @@ RSpec/MissingExampleGroupArgument:
 
 RSpec/MultipleExpectations:
   Enabled: false
-#  Severity: warning # enable in future
+# !  Enabled in rubocop-strict
 
 RSpec/NestedGroups:
   Enabled: false
@@ -390,19 +390,19 @@ RSpec/OverwritingSetup:
 
 RSpec/RepeatedDescription:
   Enabled: false
-#  Severity: warning # enable in future
+# !  Enabled in rubocop-strict
 
 RSpec/RepeatedExampleGroupBody:
   Enabled: false
-#  Severity: warning # enable in future
+# !  Enabled in rubocop-strict
 
 RSpec/RepeatedExampleGroupDescription:
   Enabled: false
-#  Severity: warning # enable in future
+# !  Enabled in rubocop-strict
 
 RSpec/ScatteredSetup:
   Enabled: false
-#  Severity: warning # enable in future
+# !  Enabled in rubocop-strict
 
 RSpec/VerifiedDoubles:
   Enabled: false
