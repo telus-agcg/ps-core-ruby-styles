@@ -1,0 +1,24 @@
+# These are in a separate file to enable opting in
+
+require:
+  - rubocop-rspec
+
+inherit_mode:
+  merge:
+  - Exclude
+  - Include
+
+RSpec/MultipleExpectations:
+  Enabled: true
+
+RSpec/RepeatedDescription:
+  Enabled: true
+
+RSpec/RepeatedExampleGroupBody:
+  Enabled: true
+
+RSpec/RepeatedExampleGroupDescription:
+  Enabled: true
+
+RSpec/ScatteredSetup:
+  Enabled: true
