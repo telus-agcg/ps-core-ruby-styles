@@ -22,7 +22,7 @@ When submitting a new PR add your PR's details under the appropriate subsection 
 ### Security
 
 ------------------------
-## 0.0.4.2 (2022-09-22)
+## 0.0.4.3 (2022-09-22)
 
 ### Changed
 
