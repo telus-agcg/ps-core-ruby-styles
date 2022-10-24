@@ -160,9 +160,6 @@ Lint/InterpolationCheck:
 Lint/LambdaWithoutLiteralBlock:
   Enabled: false
 
-Lint/MissingCopEnableDirective:
-  Enabled: false
-
 Lint/MixedRegexpCaptureTypes:
   Enabled: false
 
@@ -213,6 +210,9 @@ Lint/RefinementImportMethods:
 
 Lint/RegexpAsCondition:
   Enabled: false
+
+Lint/RequireRangeParentheses:
+  Enabled: true
 
 Lint/RequireRelativeSelfPath:
   Enabled: true
@@ -476,6 +476,7 @@ Style/BisectedAttrAccessor:
 
 Style/CaseEquality:
   AllowOnConstant: true
+  AllowOnSelfClass: true
 
 Style/CaseLikeIf:
   Enabled: false
@@ -518,6 +519,9 @@ Style/DoubleNegation:
 
 Style/EmptyBlockParameter:
   Enabled: false
+
+Style/EmptyHeredoc:
+  Enabled: true
 
 Style/EmptyLambdaParameter:
   Enabled: false
@@ -609,6 +613,10 @@ Style/KeywordParametersOrder:
 Style/Lambda:
   Enabled: false
 
+Style/MagicCommentFormat:
+  Enabled: true
+  ValueCapitalization: lowercase
+
 Style/MapCompactWithConditionalBlock:
   Enabled: false
 
@@ -617,7 +625,7 @@ Style/MapToHash:
 
 Style/MethodCallWithArgsParentheses:
   Enabled: true
-  IgnoredMethods:
+  AllowedMethods:
   - require
   - require_relative
   - require_dependency
@@ -787,7 +795,7 @@ Style/TrailingBodyOnMethodDefinition:
   Enabled: false
 
 Style/TrailingCommaInArguments:
-  Enabled: false
+  EnforcedStyleForMultiline: comma
 
 Style/TrailingCommaInArrayLiteral:
   EnforcedStyleForMultiline: consistent_comma
@@ -809,3 +817,7 @@ Style/WordArray:
 
 Style/YodaCondition:
   Enabled: false
+
+Style/ClassMethodsDefinitions:
+  EnforcedStyle: self_class
+  Enabled: true
