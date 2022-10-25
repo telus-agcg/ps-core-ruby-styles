@@ -22,6 +22,12 @@ When submitting a new PR add your PR's details under the appropriate subsection 
 ### Security
 
 ------------------------
+## 0.0.5 (2022-10-24)
+
+### Changed
+
+* [27](https://github.com/technekes/ps-core-ruby-styles/pull/27): Merged in upstream changes - [@nathansgithub](https://github.com/nathansgithub)
+
 ## 0.0.4.3 (2022-09-22)
 
 ### Changed

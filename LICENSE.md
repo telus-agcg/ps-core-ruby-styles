@@ -1,6 +1,6 @@
 MIT License
 
-Original work Copyright (c) 2022 Shopify
+Original work Copyright (c) 2015-2022 Shopify Inc.
 Modified work Copyright (c) 2022 TELUS Agriculture
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
