@@ -18,10 +18,13 @@ Bundler/OrderedGems:
 Gemspec/DeprecatedAttributeAssignment:
   Enabled: true
 
-Gemspec/RequiredRubyVersion:
+Gemspec/DevelopmentDependencies:
   Enabled: false
 
 Gemspec/RequireMFA:
+  Enabled: false
+
+Gemspec/RequiredRubyVersion:
   Enabled: false
 
 Layout/ArgumentAlignment:
@@ -34,13 +37,24 @@ Layout/EndAlignment:
   EnforcedStyleAlignWith: variable
 
 Layout/FirstArgumentIndentation:
-  Enabled: false
+  EnforcedStyle: consistent
 
 Layout/FirstArrayElementIndentation:
   EnforcedStyle: consistent
 
+Layout/FirstArrayElementLineBreak:
+  Enabled: true
+  AllowMultilineFinalElement: true
+
 Layout/FirstHashElementIndentation:
   EnforcedStyle: consistent
+
+Layout/FirstHashElementLineBreak:
+  Enabled: true
+
+Layout/FirstMethodArgumentLineBreak:
+  Enabled: true
+  AllowMultilineFinalElement: true
 
 Layout/HashAlignment:
   EnforcedLastArgumentHashStyle: ignore_implicit
@@ -59,6 +73,17 @@ Layout/LineLength:
   IgnoreCopDirectives: false
   AllowedPatterns:
   - "\\A\\s*(remote_)?test(_\\w+)?\\s.*(do|->)(\\s|\\Z)"
+
+Layout/MultilineArrayLineBreaks:
+  Enabled: true
+  AllowMultilineFinalElement: true
+
+Layout/MultilineHashKeyLineBreaks:
+  Enabled: true
+
+Layout/MultilineMethodArgumentLineBreaks:
+  Enabled: true
+  AllowMultilineFinalElement: true
 
 Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
@@ -108,6 +133,9 @@ Lint/DuplicateCaseCondition:
 
 Lint/DuplicateElsifCondition:
   Enabled: false
+
+Lint/DuplicateMagicComment:
+  Enabled: true
 
 Lint/DuplicateRegexpCharacterClassElement:
   Enabled: false
@@ -286,6 +314,9 @@ Lint/UriRegexp:
 Lint/UselessMethodDefinition:
   Enabled: false
 
+Lint/UselessRescue:
+  Enabled: true
+
 Lint/UselessRuby2Keywords:
   Enabled: true
 
@@ -447,11 +478,11 @@ RSpec/SubjectStub:
 Security/CompoundHash:
   Enabled: false
 
-Security/MarshalLoad:
-  Enabled: false
-
 Security/IoMethods:
   Enabled: true
+
+Security/MarshalLoad:
+  Enabled: false
 
 Security/YAMLLoad:
   Enabled: false
@@ -471,6 +502,9 @@ Style/AndOr:
 Style/ArgumentsForwarding:
   Enabled: false
 
+Style/ArrayIntersect:
+  Enabled: true
+
 Style/BisectedAttrAccessor:
   Enabled: false
 
@@ -483,6 +517,10 @@ Style/CaseLikeIf:
 
 Style/ClassEqualityComparison:
   Enabled: false
+
+Style/ClassMethodsDefinitions:
+  EnforcedStyle: self_class
+  Enabled: true
 
 Style/CollectionCompact:
   Enabled: false
@@ -498,6 +536,12 @@ Style/CommandLiteral:
 
 Style/CommentedKeyword:
   Enabled: false
+
+Style/ComparableClamp:
+  Enabled: true
+
+Style/ConcatArrayLiterals:
+  Enabled: true
 
 Style/DateTime:
   Enabled: true
@@ -607,6 +651,9 @@ Style/InPatternThen:
 Style/InverseMethods:
   Enabled: false
 
+Style/InvertibleUnlessCondition:
+  Enabled: true
+
 Style/KeywordParametersOrder:
   Enabled: false
 
@@ -623,6 +670,9 @@ Style/MapCompactWithConditionalBlock:
 Style/MapToHash:
   Enabled: false
 
+Style/MapToSet:
+  Enabled: false
+
 Style/MethodCallWithArgsParentheses:
   Enabled: true
   AllowedMethods:
@@ -637,6 +687,9 @@ Style/MethodCallWithArgsParentheses:
 
 Style/MinMax:
   Enabled: false
+
+Style/MinMaxComparison:
+  Enabled: true
 
 Style/MixinGrouping:
   Enabled: false
@@ -683,9 +736,6 @@ Style/NumberedParameters:
 Style/NumberedParametersLimit:
   Enabled: false
 
-Style/NumericLiteralPrefix:
-  EnforcedOctalStyle: zero_only
-
 Style/NumericLiterals:
   Enabled: false
 
@@ -696,6 +746,9 @@ Style/ObjectThen:
   Enabled: false
 
 Style/OpenStructUse:
+  Enabled: true
+
+Style/OperatorMethodCall:
   Enabled: true
 
 Style/OptionalBooleanParameter:
@@ -725,6 +778,15 @@ Style/RedundantCondition:
 Style/RedundantConditional:
   Enabled: false
 
+Style/RedundantConstantBase:
+  Enabled: true
+
+Style/RedundantDoubleSplatHashBraces:
+  Enabled: true
+
+Style/RedundantEach:
+  Enabled: true
+
 Style/RedundantFetchBlock:
   Enabled: false
 
@@ -748,6 +810,9 @@ Style/RedundantSelfAssignmentBranch:
 
 Style/RedundantSort:
   Enabled: false
+
+Style/RedundantStringEscape:
+  Enabled: true
 
 Style/RegexpLiteral:
   EnforcedStyle: mixed
@@ -817,7 +882,3 @@ Style/WordArray:
 
 Style/YodaCondition:
   Enabled: false
-
-Style/ClassMethodsDefinitions:
-  EnforcedStyle: self_class
-  Enabled: true

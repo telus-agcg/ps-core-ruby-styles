@@ -1,4 +1,4 @@
-FROM ruby:3.1.1 AS pre_release
+FROM ruby:3.2.0 AS pre_release
 
 WORKDIR /usr/src/app
 
@@ -10,7 +10,7 @@ COPY . /usr/src/app
 
 RUN bundle install -j5
 
-FROM ruby:3.1.1 AS release
+FROM ruby:3.2.0 AS release
 
 WORKDIR /usr/src/app
 
