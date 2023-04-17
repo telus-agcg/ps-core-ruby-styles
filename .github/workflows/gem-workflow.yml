@@ -33,4 +33,4 @@ jobs:
       - name: Deploy Gem
         if: github.event_name  == 'push'
         run: |
-          GH_TOKEN=${{ secrets.GH_TOKEN }} docker-compose -p ci run deploy
+          GH_TOKEN=${{ secrets.GITHUB_TOKEN }} docker-compose -p ci run deploy

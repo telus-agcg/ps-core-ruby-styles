@@ -11,12 +11,12 @@ Gem::Specification.new do |spec|
   spec.license = "MIT"
 
   spec.author   = "PsCore"
-  spec.homepage = "https://github.com/technekes/ps-core-ruby-styles"
+  spec.homepage = "https://github.com/telus-agcg/ps-core-ruby-styles"
 
   spec.files = Dir["*.yml"]
 
   spec.metadata = {
-    "source_code_uri" => "https://github.com/technekes/ps-core-ruby-styles/tree/v#{spec.version}",
+    "source_code_uri" => "https://github.com/telus-agcg/ps-core-ruby-styles/tree/v#{spec.version}",
   }
 
   spec.required_ruby_version = ">= 3.1"
