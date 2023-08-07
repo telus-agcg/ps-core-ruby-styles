@@ -70,9 +70,9 @@ Layout/LineEndStringConcatenationIndentation:
   EnforcedStyle: indented
 
 Layout/LineLength:
-  IgnoreCopDirectives: false
   AllowedPatterns:
   - "\\A\\s*(remote_)?test(_\\w+)?\\s.*(do|->)(\\s|\\Z)"
+  - "\\A\\s*def test_\\w+\\s*\\Z"
 
 Layout/MultilineArrayLineBreaks:
   Enabled: true
@@ -137,6 +137,9 @@ Lint/DuplicateElsifCondition:
 Lint/DuplicateMagicComment:
   Enabled: true
 
+Lint/DuplicateMatchPattern:
+  Enabled: true
+
 Lint/DuplicateRegexpCharacterClassElement:
   Enabled: false
 
@@ -188,6 +191,9 @@ Lint/InterpolationCheck:
 Lint/LambdaWithoutLiteralBlock:
   Enabled: false
 
+Lint/MixedCaseRange:
+  Enabled: true
+
 Lint/MixedRegexpCaptureTypes:
   Enabled: false
 
@@ -198,7 +204,7 @@ Lint/NestedPercentLiteral:
   Enabled: false
 
 Lint/NoReturnInBeginEndBlocks:
-  Enabled: false
+  Enabled: true
 
 Lint/NonAtomicFileOperation:
   Enabled: false
@@ -220,6 +226,9 @@ Lint/RaiseException:
 
 Lint/RedundantDirGlobSort:
   Enabled: false
+
+Lint/RedundantRegexpQuantifiers:
+  Enabled: true
 
 Lint/RedundantRequireStatement:
   Enabled: false
@@ -332,6 +341,9 @@ Metrics/BlockLength:
 Metrics/ClassLength:
   Enabled: false
 
+Metrics/CollectionLiteralLength:
+  Enabled: true
+
 Metrics/CyclomaticComplexity:
   Enabled: false
 
@@ -372,13 +384,18 @@ Naming/InclusiveLanguage:
         - leader
       AllowedRegex:
         - !ruby/regexp '/master[_\s\.]key/' # Rails master key
-        - 'blob/master/'
-        - 'origin/master'
+        - !ruby/regexp /\w*:\/\/\S+/ # URLs (e.g. https://github.com/org/repo/blob/master/README.md)
+        - !ruby/regexp '/(?:blob|tree)/master/' # e.g. github.com/org/repo/blob/master/README.md, without https://
+        - !ruby/regexp '/origin[ \/]master/' # Legacy default git branch name
         - 'mastercard'
         - 'webmaster'
 
 Naming/MemoizedInstanceVariableName:
   Enabled: false
+
+Naming/MethodName:
+  AllowedPatterns:
+    - '\Atest_'
 
 Naming/MethodParameterName:
   Enabled: false
@@ -496,9 +513,6 @@ Style/AccessorGrouping:
 Style/Alias:
   EnforcedStyle: prefer_alias_method
 
-Style/AndOr:
-  EnforcedStyle: always
-
 Style/ArgumentsForwarding:
   Enabled: false
 
@@ -543,11 +557,17 @@ Style/ComparableClamp:
 Style/ConcatArrayLiterals:
   Enabled: true
 
+Style/DataInheritance:
+  Enabled: true
+
 Style/DateTime:
   Enabled: true
 
 Style/Dir:
   Enabled: false
+
+Style/DirEmpty:
+  Enabled: true
 
 Style/DocumentDynamicEvalDefinition:
   Enabled: false
@@ -585,6 +605,9 @@ Style/EnvHome:
 Style/EvalWithLocation:
   Enabled: false
 
+Style/ExactRegexpMatch:
+  Enabled: true
+
 Style/ExpandPathArguments:
   Enabled: false
 
@@ -593,6 +616,9 @@ Style/ExponentialNotation:
 
 Style/FetchEnvVar:
   Enabled: false
+
+Style/FileEmpty:
+  Enabled: true
 
 Style/FileRead:
   Enabled: false
@@ -643,7 +669,7 @@ Style/IfUnlessModifier:
   Enabled: false
 
 Style/IfWithBooleanLiteralBranches:
-  Enabled: false
+  Enabled: true
 
 Style/InPatternThen:
   Enabled: true
@@ -769,6 +795,9 @@ Style/RandomWithOffset:
 Style/RedundantArgument:
   Enabled: false
 
+Style/RedundantArrayConstructor:
+  Enabled: true
+
 Style/RedundantAssignment:
   Enabled: false
 
@@ -779,6 +808,9 @@ Style/RedundantConditional:
   Enabled: false
 
 Style/RedundantConstantBase:
+  Enabled: true
+
+Style/RedundantCurrentDirectoryInPath:
   Enabled: true
 
 Style/RedundantDoubleSplatHashBraces:
@@ -793,11 +825,26 @@ Style/RedundantFetchBlock:
 Style/RedundantFileExtensionInRequire:
   Enabled: false
 
+Style/RedundantFilterChain:
+  Enabled: true
+
+Style/RedundantHeredocDelimiterQuotes:
+  Enabled: true
+
 Style/RedundantInitialize:
   Enabled: false
 
+Style/RedundantLineContinuation:
+  Enabled: true
+
+Style/RedundantRegexpArgument:
+  Enabled: true
+
 Style/RedundantRegexpCharacterClass:
   Enabled: false
+
+Style/RedundantRegexpConstructor:
+  Enabled: true
 
 Style/RedundantRegexpEscape:
   Enabled: false
@@ -819,6 +866,12 @@ Style/RegexpLiteral:
 
 Style/RescueStandardError:
   Enabled: false
+
+Style/ReturnNil:
+  Enabled: true
+
+Style/ReturnNilInPredicateMethodDefinition:
+  Enabled: true
 
 Style/SelectByRegexp:
   Enabled: false
@@ -879,6 +932,9 @@ Style/UnpackFirst:
 
 Style/WordArray:
   EnforcedStyle: brackets
+
+Style/YAMLFileRead:
+  Enabled: true
 
 Style/YodaCondition:
   Enabled: false
