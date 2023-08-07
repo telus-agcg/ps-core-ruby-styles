@@ -22,11 +22,18 @@ When submitting a new PR add your PR's details under the appropriate subsection 
 ### Security
 
 ------------------------
+## 0.1.1 (2023-08-07)
+
+### Changed
+
+* [62](https://github.com/technekes/ps-core-ruby-styles/pull/62): Merged in upstream changes - [@nathansgithub](https://github.com/nathansgithub)
+
 ## 0.1.0 (2023-01-30)
 
 ### Changed
 
 * [41](https://github.com/technekes/ps-core-ruby-styles/pull/41): Merged in upstream changes. Upgraded to Ruby 3.2 in Dockerfile. - [@nathansgithub](https://github.com/nathansgithub)
+
 ## 0.0.5 (2022-10-24)
 
 ### Changed
