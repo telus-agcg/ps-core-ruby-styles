@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = ">= 3.1"
 
   spec.add_dependency("rubocop", "~> 1.53")
-  spec.add_dependency("rubocop-rspec", "~> 2.12")
+  spec.add_dependency("rubocop-rspec", "~> 2.24")
 
   spec.add_development_dependency("diffy")
   spec.add_development_dependency("pry-byebug")
