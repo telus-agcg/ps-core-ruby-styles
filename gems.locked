@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ps-core-ruby-styles (0.1.1)
+    ps-core-ruby-styles (0.1.2)
       rubocop (~> 1.53)
       rubocop-rspec (~> 2.12)
 
