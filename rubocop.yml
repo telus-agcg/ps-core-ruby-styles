@@ -423,10 +423,6 @@ RSpec/MissingExampleGroupArgument:
   Enabled: false
 #  Severity: warning # enable in future
 
-RSpec/MultipleExpectations:
-  Enabled: false
-# !  Enabled in rubocop-strict
-
 RSpec/NestedGroups:
   Enabled: false
 #  Severity: warning # enable in future
@@ -434,22 +430,6 @@ RSpec/NestedGroups:
 RSpec/OverwritingSetup:
   Enabled: false
 #  Severity: warning # enable in future
-
-RSpec/RepeatedDescription:
-  Enabled: false
-# !  Enabled in rubocop-strict
-
-RSpec/RepeatedExampleGroupBody:
-  Enabled: false
-# !  Enabled in rubocop-strict
-
-RSpec/RepeatedExampleGroupDescription:
-  Enabled: false
-# !  Enabled in rubocop-strict
-
-RSpec/ScatteredSetup:
-  Enabled: false
-# !  Enabled in rubocop-strict
 
 RSpec/VerifiedDoubles:
   Enabled: false
@@ -462,9 +442,6 @@ RSpec/ContextWording:
   Enabled: false
 
 RSpec/ExampleLength:
-  Enabled: false
-
-RSpec/FilePath:
   Enabled: false
 
 RSpec/Focus:
@@ -486,6 +463,12 @@ RSpec/PredicateMatcher:
   Enabled: false
 
 RSpec/ScatteredLet:
+  Enabled: false
+
+RSpec/SpecFilePathFormat:
+  Enabled: false
+
+RSpec/SpecFilePathSuffix:
   Enabled: false
 
 RSpec/SubjectStub:
