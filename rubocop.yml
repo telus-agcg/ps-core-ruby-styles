@@ -3,8 +3,8 @@ require:
 
 inherit_mode:
   merge:
-  - Exclude
-  - Include
+    - Exclude
+    - Include
 
 AllCops:
   StyleGuideBaseURL: https://github.com/telus-agcg/ps-core-ruby-styles/
@@ -71,8 +71,8 @@ Layout/LineEndStringConcatenationIndentation:
 
 Layout/LineLength:
   AllowedPatterns:
-  - "\\A\\s*(remote_)?test(_\\w+)?\\s.*(do|->)(\\s|\\Z)"
-  - "\\A\\s*def test_\\w+\\s*\\Z"
+    - "\\A\\s*(remote_)?test(_\\w+)?\\s.*(do|->)(\\s|\\Z)"
+    - "\\A\\s*def test_\\w+\\s*\\Z"
 
 Layout/MultilineArrayLineBreaks:
   Enabled: true
@@ -385,10 +385,10 @@ Naming/InclusiveLanguage:
       AllowedRegex:
         - !ruby/regexp '/master[_\s\.]key/' # Rails master key
         - !ruby/regexp /\w*:\/\/\S+/ # URLs (e.g. https://github.com/org/repo/blob/master/README.md)
-        - !ruby/regexp '/(?:blob|tree)/master/' # e.g. github.com/org/repo/blob/master/README.md, without https://
+        - !ruby/regexp "/(?:blob|tree)/master/" # e.g. github.com/org/repo/blob/master/README.md, without https://
         - !ruby/regexp '/origin[ \/]master/' # Legacy default git branch name
-        - 'mastercard'
-        - 'webmaster'
+        - "mastercard"
+        - "webmaster"
 
 Naming/MemoizedInstanceVariableName:
   Enabled: false
@@ -402,9 +402,9 @@ Naming/MethodParameterName:
 
 Naming/PredicateName:
   NamePrefix:
-  - is_
+    - is_
   ForbiddenPrefixes:
-  - is_
+    - is_
 
 Naming/RescuedExceptionsVariableName:
   Enabled: false
@@ -465,7 +465,10 @@ RSpec/ContextWording:
 RSpec/ExampleLength:
   Enabled: false
 
-RSpec/FilePath:
+RSpec/SpecFilePathFormat:
+  Enabled: false
+
+RSpec/SpecFilePathSuffix:
   Enabled: false
 
 RSpec/Focus:
@@ -634,9 +637,10 @@ Style/FormatStringToken:
 
 Style/FrozenStringLiteralComment:
   SafeAutoCorrect: true
-  Details: 'Add `# frozen_string_literal: true` to the top of the file. Frozen string
+  Details:
+    "Add `# frozen_string_literal: true` to the top of the file. Frozen string
     literals will become the default in a future Ruby version, and we want to make
-    sure we''re ready.'
+    sure we're ready."
 
 Style/GuardClause:
   Enabled: false
@@ -702,14 +706,14 @@ Style/MapToSet:
 Style/MethodCallWithArgsParentheses:
   Enabled: true
   AllowedMethods:
-  - require
-  - require_relative
-  - require_dependency
-  - yield
-  - raise
-  - puts
+    - require
+    - require_relative
+    - require_dependency
+    - yield
+    - raise
+    - puts
   Exclude:
-  - "/**/Gemfile"
+    - "/**/Gemfile"
 
 Style/MinMax:
   Enabled: false
