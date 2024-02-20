@@ -22,6 +22,7 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = ">= 3.2"
 
   spec.add_dependency("rubocop", "~> 1.60")
+  spec.add_dependency("rubocop-performance")
   spec.add_dependency("rubocop-rspec", "~> 2.26")
 
   spec.add_development_dependency("diffy")
