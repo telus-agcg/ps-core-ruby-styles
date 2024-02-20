@@ -8,6 +8,7 @@ services: &default-services
       target: release
     volumes:
       - .:/usr/src/app
+      - bundle:/usr/local/bundle
 
   test:
     <<: *base
@@ -22,3 +23,6 @@ services: &default-services
     command: ./bin/actions-deploy-gem
     environment:
       GH_TOKEN: $GH_TOKEN
+
+volumes:
+  bundle:

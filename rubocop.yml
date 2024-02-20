@@ -1,4 +1,5 @@
 require:
+  - rubocop-performance
   - rubocop-rspec
 
 inherit_mode:
@@ -8,6 +9,7 @@ inherit_mode:
 
 AllCops:
   StyleGuideBaseURL: https://github.com/telus-agcg/ps-core-ruby-styles/
+  NewCops: disable # New cops will be triaged by style guide maintainers instead.
 
 Bundler/GemFilename:
   Enabled: false
@@ -60,10 +62,10 @@ Layout/HashAlignment:
   EnforcedLastArgumentHashStyle: ignore_implicit
 
 Layout/LineContinuationLeadingSpace:
-  Enabled: false
+  Enabled: true
 
 Layout/LineContinuationSpacing:
-  Enabled: false
+  Enabled: true
 
 Layout/LineEndStringConcatenationIndentation:
   Enabled: true
@@ -188,8 +190,14 @@ Lint/IncompatibleIoSelectWithFiberScheduler:
 Lint/InterpolationCheck:
   Enabled: false
 
+Lint/ItWithoutArgumentsInBlock:
+  Enabled: true
+
 Lint/LambdaWithoutLiteralBlock:
   Enabled: false
+
+Lint/LiteralAssignmentInCondition:
+  Enabled: true
 
 Lint/MixedCaseRange:
   Enabled: true
@@ -579,7 +587,7 @@ Style/Encoding:
   Enabled: false
 
 Style/EndlessMethod:
-  Enabled: false
+  Enabled: true
 
 Style/EnvHome:
   Enabled: false
@@ -616,6 +624,7 @@ Style/FormatStringToken:
 
 Style/FrozenStringLiteralComment:
   SafeAutoCorrect: true
+  EnforcedStyle: always_true
   Details: 'Add `# frozen_string_literal: true` to the top of the file. Frozen string
     literals will become the default in a future Ruby version, and we want to make
     sure we''re ready.'
@@ -861,6 +870,9 @@ Style/SelectByRegexp:
 Style/SingleArgumentDig:
   Enabled: false
 
+Style/SingleLineDoEndBlock:
+  Enabled: true
+
 Style/SlicingWithRange:
   Enabled: false
 
@@ -884,6 +896,9 @@ Style/StringLiteralsInInterpolation:
 
 Style/StructInheritance:
   Enabled: false
+
+Style/SuperWithArgsParentheses:
+  Enabled: true
 
 Style/SwapValues:
   Enabled: false

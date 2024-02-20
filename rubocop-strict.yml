@@ -1,8 +1,5 @@
 # These are in a separate file to enable opting in
 
-require:
-  - rubocop-rspec
-
 inherit_mode:
   merge:
   - Exclude

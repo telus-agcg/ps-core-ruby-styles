@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   spec.name        = "ps-core-ruby-styles"
   spec.version     = File.read("VERSION")
   spec.summary     = "PsCore's style guide for Ruby."
-  spec.description = "Gem containing the rubocop.yml config that corresponds to "\
+  spec.description = "Gem containing the rubocop.yml config that corresponds to " \
     "the implementation of the PsCore style guide for Ruby."
 
   spec.license = "MIT"
@@ -19,10 +19,11 @@ Gem::Specification.new do |spec|
     "source_code_uri" => "https://github.com/telus-agcg/ps-core-ruby-styles/tree/v#{spec.version}",
   }
 
-  spec.required_ruby_version = ">= 3.1"
+  spec.required_ruby_version = ">= 3.2"
 
-  spec.add_dependency("rubocop", "~> 1.53")
-  spec.add_dependency("rubocop-rspec", "~> 2.24")
+  spec.add_dependency("rubocop", "~> 1.60")
+  spec.add_dependency("rubocop-performance")
+  spec.add_dependency("rubocop-rspec", "~> 2.26")
 
   spec.add_development_dependency("diffy")
   spec.add_development_dependency("pry-byebug")
