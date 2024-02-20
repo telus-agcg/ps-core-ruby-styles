@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -e
+set -o pipefail
+set -x
+
+bundle check || bundle install -j5 && bundle clean --force
