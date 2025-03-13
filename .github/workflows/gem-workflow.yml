@@ -1,9 +1,9 @@
 name: "Gem Workflow"
 
 on:
-  pull_request:
-    branches: ["main"]
   push:
+    branches: ["main"]
+  pull_request:
     branches: ["main"]
 
 jobs:
@@ -16,21 +16,21 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Build Docker Image
         run: |
-          DOCKER_BUILDKIT=1 docker-compose -p ci build --pull
+          docker compose -p ci build --pull
 
       - name: Run Unit Tests
         run: |
-          docker-compose -p ci run test
+          docker compose -p ci run test
 
       - name: Run Code Linting
         run: |
-          docker-compose -p ci run lint
+          docker compose -p ci run lint
 
       - name: Deploy Gem
         if: github.event_name  == 'push'
         run: |
-          GH_TOKEN=${{ secrets.GITHUB_TOKEN }} docker-compose -p ci run deploy
+          GH_TOKEN=${{ secrets.GITHUB_TOKEN }} docker compose -p ci run deploy
